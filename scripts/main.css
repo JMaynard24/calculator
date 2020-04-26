@@ -1,0 +1,116 @@
+body
+{
+    background-color: bisque;
+}
+
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: #535353;
+    text-align: center;
+    margin: 5% 0 0 0;
+}
+
+p
+{
+    margin: 5px 10px 0 0;
+}
+
+#output-container
+{
+    width: 409.6px;
+    height: 96px;
+    border: 2px solid #535353;
+    background-color: #333333;
+    color: #dddddd;
+    font-family: arial, sans-serif;
+    font-size: 32px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 2% auto 0 auto;
+}
+
+#button-container
+{
+    width: 409.6px;
+    height: 512px;
+    border: 2px solid #535353;
+    display: grid;
+    grid-template-columns: 102.4px 102.4px 102.4px 102.4px;
+    grid-template-rows: 102.4px 102.4px 102.4px 102.4px 102.4px;
+    grid-template-areas:
+        "c / * -"
+        "7 8 9 +"
+        "4 5 6 +"
+        "1 2 3 ="
+        "0 0 . =";
+    flex: flex-start;
+    margin: 0 auto 0 auto;
+}
+
+.button{
+    background-color: #ffffff;
+    border: 1px solid #535353;
+    border-radius: 0px;
+    color: #535353;
+    font-family: arial, sans-serif;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: center;
+}
+
+.button:hover
+{
+    border: 1px solid #FF0000;
+    font-size: 32px;
+}
+
+.button:active
+{
+    border: 1px solid #FF0000;
+    font-size: 48px;
+}
+
+.sqr-button
+{
+    height: 102.4px;
+    min-width: 102.4px;
+}
+
+.tall-button
+{
+    height: 204.8px;
+    min-width: 102.4px;
+}
+
+.long-button
+{
+    height: 102.4px;
+    min-width: 204.8px;
+}
+
+#add
+{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+#equals
+{
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+#zero
+{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="scripts/reset.css">
+    <link rel="stylesheet" type="text/css" href="scripts/main.css">
+</head>
+
+<body ondragstart="return false;" ondrop="return false;">
+    <h1>Calculate some stuff!</h1>
+
+    <div id ="output-container">
+        <p id ="output">0</p>
+    </div>
+
+    <div id="button-container" onmousedown="event.preventDefault();">
+        <button type="button" id="clear" class="action sqr-button button">C</button>
+        <button type="button" id="divide" class="action sqr-button button">/</button>
+        <button type="button" id="multiply" class="action sqr-button button">*</button>
+        <button type="button" id="subtract" class="action sqr-button button">-</button>
+        <button type="button" id="seven" class="number sqr-button button">7</button>
+        <button type="button" id="eight" class="number sqr-button button">8</button>
+        <button type="button" id="nine" class="number sqr-button button">9</button>
+        <button type="button" id="add" class="action tall-button button">+</button>
+        <button type="button" id="four" class="number sqr-button button">4</button>
+        <button type="button" id="five" class="number sqr-button button">5</button>
+        <button type="button" id="six" class="number sqr-button button">6</button>
+        <button type="button" id="one" class="number sqr-button button">1</button>
+        <button type="button" id="two" class="number sqr-button button">2</button>
+        <button type="button" id="three" class="number sqr-button button">3</button>
+        <button type="button" id="equals" class="action tall-button button">=</button>
+        <button type="button" id="zero" class="number long-button button">0</button>
+        <button type="button" id="decimal" class="action sqr-button button">.</button>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
