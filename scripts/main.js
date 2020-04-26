@@ -29,6 +29,7 @@ let outputDisplay = document.getElementById("output");
 let runningTotal = "0";
 let numberToOperate = "0";
 let operator = null;
+let reset = false;
 
 //----------------------------------------------
 
@@ -66,14 +67,20 @@ function subtract(a,b)
 function clearCalc()
 {
     console.log("Attempted clear")
-    runningTotal = 0;
-    firstNumber = "0";
-    secondNumber = "0";
+    runningTotal = "0";
+    numberToOperate = "0";
+    operator = null;
     outputDisplay.textContent = String(runningTotal);
 }
 
 function addToNumber(e)
 {
+    if (reset)
+    {
+        clearCalc()
+        reset = false;
+    }
+
     console.log("Attempted to add " + e.currentTarget.num)
     if (numberToOperate.search("\\.") != -1 && e.currentTarget.num == ".")
     {
@@ -84,7 +91,7 @@ function addToNumber(e)
     {
         return;
     }
-    
+
     numberToOperate = numberToOperate + e.currentTarget.num;
     while(numberToOperate[0] == "0" && numberToOperate.length > 1)
     {
@@ -96,6 +103,7 @@ function addToNumber(e)
 function changeNumber(e)
 {
     console.log("Attempted Number Change with " + e.currentTarget.action)
+    reset = false;
     if (numberToOperate == "0")
     {
         return
@@ -139,6 +147,7 @@ function calculate()
 
     numberToOperate = "0"
     outputDisplay.textContent = String(runningTotal);
+    reset = true;
 }
 
 //----------------------------------------------
