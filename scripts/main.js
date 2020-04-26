@@ -103,13 +103,11 @@ function addToNumber(e)
 function changeNumber(e)
 {
     console.log("Attempted Number Change with " + e.currentTarget.action)
-    reset = false;
-    if (numberToOperate == "0")
+    if (reset)
     {
-        return
+        operator = e.currentTarget.action;
     }
-
-    if (operator != null)
+    else if (operator != null)
     {
         calculate(e.currentTarget.action);
         operator = e.currentTarget.action;
@@ -120,6 +118,7 @@ function changeNumber(e)
         runningTotal = numberToOperate;
     }
     numberToOperate = "0";
+    reset = false;
 }
 
 function calculate()
